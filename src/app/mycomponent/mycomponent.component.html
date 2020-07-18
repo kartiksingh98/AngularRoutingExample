@@ -1,0 +1,12 @@
+<h1 class="">hey hi</h1>
+<div class="container p-3 my-3 bg-dark text-white">
+<p class="alert alert-primary">
+    Mangoooo
+</p>
+<p>
+<input type="text" [(ngModel)]="qty">
+Insert Quantity<input type="text" #txtQty [value]="qty">
+<button class="btn btn-warning" (click)="incrqty(txtQty.value)">Mangoess</button>
+</p>
+you have to pay Rs {{qty*25}}
+</div>

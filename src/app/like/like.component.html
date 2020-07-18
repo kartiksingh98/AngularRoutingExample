@@ -1,0 +1,16 @@
+<p>
+<span class="glyphicon glyphicon-thumbs-up" (click)="likecount()"></span>
+<span class="glyphicon glyphicon-thumbs-down" (click)="likedicrease()"></span>
+
+</p>
+<p>
+    number of likes is {{count}}
+</p>
+
+<p>
+    <span [class]="favStatus?'glyphicon glyphicon-heart':'glyphicon glyphicon-heart-empty'" (click)="favChange()"></span>
+   
+</p>
+<p>
+    <span [class]="likeclassname" (click)="favChange1()"></span>
+</p>
