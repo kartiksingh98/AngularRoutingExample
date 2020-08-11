@@ -1,0 +1,15 @@
+<section class="alert alert-succes">
+    <section *ngFor="let m of movies" class="alert alert-warning" id="display">
+        <p *ngIf="m.count; else soldOut">
+            Name: {{m.name}}<br/>
+            Duration: {{m.duration}}<br/>
+            Movie Pic:<img *ngIf="m.pic; else noImg" [src]="m.pic" height="100" width="100" alt="No pic"/>
+             <ng-template #noImg> Sorryy</ng-template>
+             <br/>
+            Count: {{m.count}}<br/>
+            Fav Status:<span [class]="m.likeStatus>3?'glyphicon glyphicon-heart':'glyphicon glyphicon-heart-empty'"></span><br/>
+            <button class="btn btn-success" (click)="addtocart(m)">Add to Cart</button>
+        </p>
+        <ng-template #soldOut>Movie Soldout</ng-template>
+    </section>
+</section>

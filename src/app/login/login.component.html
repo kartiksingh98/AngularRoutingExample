@@ -1,0 +1,26 @@
+<P> LOGIN WORKS</P>
+<div class="container container-fluid">
+    <form [formGroup]="loginform">
+    <label>UserName</label>
+    <input type="text" class="form-control" formControlName="username">
+    <p class="alert alert-danger" *ngIf="username.touched && username.invalid">
+        <span class="alert alert-danger" *ngIf="username.errors.required">UserName Cannot be Empty</span>
+        <span class="alert alert-danger " *ngIf="username.errors.minlength">Username should have  3 characters</span>
+        <span class="alert alert-danger " *ngIf="username.errors.pattern">UserName will start with U00</span>
+    </p>
+    <br/>
+    <label>Password</label>
+    <input type="password" class="form-control" formControlName="password">
+    <p class="alert alert-danger" *ngIf="password.touched && password.invalid">
+        <span class="alert alert-danger" *ngIf="password.errors.required"> Password Cannot be Empty</span>
+        <span class="alert alert-danger " *ngIf="username.errors.minlength">Min 4 characters</span>
+        
+    </p>
+    <button class="btn btn-success" (click)="submitdetails()">Submit</button>
+    <button class="btn btn-danger" (click)="Reset()"> Reset</button>
+</form>
+</div>
+<br/>
+<div class="container container-fluid" *ngIf="showToggle">
+    Welcome:{{logindetails.username}}
+</div>

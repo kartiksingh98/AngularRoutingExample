@@ -4,6 +4,7 @@ export class Movie
     duration: number;
     pic:string;
     likeStatus:number;
+    count:number;
     constructor()
     {
         this.likeStatus=1;

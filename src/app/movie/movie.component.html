@@ -5,17 +5,19 @@
     <label for="txtName">Movie Duration</label>
     <input type="text" [(ngModel)]="movie.duration" class="form-control">
     
+    <label for="txtName">Movie Count</label>
+    <input type="text" [(ngModel)]="movie.count" class="form-control">
+
     <label for="txtName">Number of likes</label>
     <input type="text" [(ngModel)]="movie.likeStatus" class="form-control">
-    
+
     <button class="btn btn-danger" (click)="displayDetails()">Store Movie</button>
     <span class="glyphicon glyphicon-thumbs-up" (click)="incrLikes()"></span>
 </section>
 <hr/>
-<section [hidden]="showToggle">
+<!-- <section [hidden]="showToggle">
     {{movies|json}}
-</section>
-<hr/>
-<section>
+</section> -->
+<!-- <section>
     <img [src]="movies[0].pic" alt="not binded"/>
-</section>
+</section> -->

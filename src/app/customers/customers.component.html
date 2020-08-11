@@ -1,0 +1,8 @@
+<select #cid (change)="showOption(cid.value)" class="btn btn-secondary dropdown-toggle">
+    <option *ngFor="let cust of customers" [value]="cust.id">{{cust.id}}</option>
+</select>
+
+<section>
+    <!-- {{customer|json}} -->
+    <app-customer [myCustomer]="customer"></app-customer>
+</section>
